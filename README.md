@@ -10,5 +10,5 @@ Eligimos los siguientes referentes:
 debido al diseño de sus paginas web, donde lo principal es el orden y facil uso. Destacamos tambien de ellas la simpleza aunque a su vez la autenticidad.
 
 Sobre nuestro publico ojetivo: el mismo es unisex, rondan entre los 18 - 50 años y constan con interes de proteger su vision. Estos lo que buscan es seguir las ultimas tendencias comprando desde la comodidad de su casa.
-Nuestros clientes pasan muchas horas navegando por las redes y que mejor manera de darse a conocer que aparecer en ellas. No solo tendremos nuestra pagina web, sino que tambien contaremos con anuncios en las diferentes redes mas usadas (instagram, facebook...) donde redireccionaran a la gente directamente hasta nuestra tienda.
+Nuestros clientes pasan muchas horas navegando por las redes y que mejor manera de darse a conocer que aparecer en ellas. No solo tendremos nuestra pagina web, sino que tambien contaremos con anuncios en las diferentes redes mas usadas (instagram, facebook...) donde redireccionaran a la gente directamente hasta nuestra tienda. 
 
