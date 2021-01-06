@@ -20,4 +20,5 @@ Juan Manuel Picard
 Morena Cuña
 
 
-
+BOCETO DEL LOGO
+https://www.canva.com/design/DAESfIk8WSA/share/preview?token=-Qj10gFewbuZyftvROiOrA&role=EDITOR&utm_content=DAESfIk8WSA&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
