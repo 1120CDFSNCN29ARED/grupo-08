@@ -1,16 +1,13 @@
 # grupo-08
+
 Somos una empresa creada en 2010, dedicada a los lentes tanto de sol como de ver; los mismos tienen un diseño basado fundamentalmente en la estetica y comodidad de nuestros clientes.
 
 Sobre nuestro publico ojetivo: el mismo es unisex, rondan entre los 18 - 50 años y constan con interes de proteger su vision. Estos lo que buscan es seguir las ultimas tendencias comprando desde la comodidad de su casa.
-Nuestros clientes pasan muchas horas navegando por las redes y que mejor manera de darse a conocer que aparecer en ellas. No solo tendremos nuestra pagina web, sino que tambien contaremos con anuncios en las diferentes redes mas usadas (instagram, facebook...) donde redireccionaran a la gente directamente hasta nuestra tienda. 
+Nuestros clientes pasan muchas horas navegando por las redes y que mejor manera de darse a conocer que aparecer en ellas. No solo tendremos nuestra pagina web, sino que tambien contaremos con anuncios en las diferentes redes mas usadas (instagram, facebook...) donde redireccionaran a la gente directamente hasta nuestra tienda.
 
 Eligimos los siguientes referentes:
 
-1)https://www.infinit.la/?gclid=Cj0KCQiA3NX_BRDQARIsALA3fIKF_V4hqpZRllbipdaKbbHq1y4d1g9nOYzDXq9VuVsSTaOBfzme_CsaAvsjEALw_wcB
-2)https://www.ray-ban.com/argentina
-3)https://www.krewe.com/collections/sun
-4)https://m.shein.com/us/Plain-Frame-Flat-Lens-Sunglasses-p-665644-cat-1770.html
-5)https://www.persol.com/spain
+1)https://www.infinit.la/?gclid=Cj0KCQiA3NX_BRDQARIsALA3fIKF_V4hqpZRllbipdaKbbHq1y4d1g9nOYzDXq9VuVsSTaOBfzme_CsaAvsjEALw_wcB 2)https://www.ray-ban.com/argentina 3)https://www.krewe.com/collections/sun 4)https://m.shein.com/us/Plain-Frame-Flat-Lens-Sunglasses-p-665644-cat-1770.html 5)https://www.persol.com/spain
 
 debido al diseño de sus paginas web, donde lo principal es el orden y facil uso. Destacamos tambien de ellas la simpleza aunque a su vez la autenticidad.
 
@@ -25,3 +22,17 @@ https://www.canva.com/design/DAESfIk8WSA/share/preview?token=-Qj10gFewbuZyftvROi
 
 WIREFRAME
 https://www.figma.com/file/E1awAS9eBRuY0geaVERU90/HOME?node-id=0%3A1
+
+INSTRUCCIONES PARA CORRER
+
+- Instalando dependencias:
+
+Correr `npm install`.
+
+- Crear archivo de configuraciones de entorno:
+
+Dentro del directorio princiapal, crear un archivo llamado `.env` y agregar la lista de configuraciones tal como se detalla en `.env.example`. El resultado de `.env` debería quedar de la siguiente manera:
+
+```
+PORT=3000
+```
