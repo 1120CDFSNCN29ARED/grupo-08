@@ -23,6 +23,14 @@ https://www.canva.com/design/DAESfIk8WSA/share/preview?token=-Qj10gFewbuZyftvROi
 WIREFRAME
 https://www.figma.com/file/E1awAS9eBRuY0geaVERU90/HOME?node-id=0%3A1
 
+HERRAMIENTAS
+
+- express: librería para crear servidor.
+- nodemon: librería para reinciar el servidor ante un cambio.
+- dotenv: libreía para agregar variables de entorno.
+- bootstrap: librería para manejar un sistema de grillas responsive y algunos estilos css por default.
+- jQuery: librería para agregar comportamiento de interfaz mediante JS (ver /js/main.js).
+
 INSTRUCCIONES PARA CORRER
 
 - Instalando dependencias:
@@ -36,3 +44,6 @@ Dentro del directorio princiapal, crear un archivo llamado `.env` y agregar la l
 ```
 PORT=3000
 ```
+
+Media Queries
+Tanto tablets como dispositivos mobiles utilizan el mismo menu.

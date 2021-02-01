@@ -1,0 +1,166 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* Fonts and dimensions */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+h4 {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+/* Components */
+
+.button-inverse {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 26px;
+}
+
+/* Header */
+
+.header-title {
+  background-color: var(--black);
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title h1,
+.header-title h4 {
+  color: var(--white);
+  text-align: center;
+}
+
+.header-menu {
+  height: 70px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.header-menu-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.header-menu-mobile i {
+}
+
+.header-menu-mobile img {
+  width: 60px;
+}
+
+.drawer {
+  display: none;
+  background-color: #9aa3aa;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  top: 230px;
+  padding: 30px 15px;
+}
+
+/* Mobible & Deskopt */
+.options-menu p {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--white);
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+
+.options-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drawer .options-menu {
+  margin-bottom: 60px;
+}
+
+/* TABLETS media query */
+
+@media (min-width: 768px) {
+  /* Header */
+  .drawer {
+    width: 32%;
+  }
+
+  /* Fonts and dimensions */
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h4 {
+    font-size: 27px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Header */
+
+  .header-menu {
+    height: 100px;
+  }
+
+  .header-menu-mobile {
+    display: none;
+  }
+
+  .header-menu-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 65px;
+  }
+
+  .header-menu-desktop .options-menu p {
+    color: var(--black);
+    font-size: 20px;
+  }
+
+  /* components */
+
+  .button-inverse {
+    font-size: 20px;
+  }
+
+  /* Fonts and dimensions */
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h4 {
+    font-size: 35px;
+  }
+}
