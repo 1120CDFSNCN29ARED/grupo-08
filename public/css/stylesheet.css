@@ -2,10 +2,12 @@
 
 :root {
   --black: #000000;
+  --light-black: #2d3436;
   --white: #ffffff;
   --dark-pink: #e84393;
   --blue: #0522fc;
   --purple: #d705fc;
+  --light-grey: #c2c2c2;
 }
 
 /* General settings */
@@ -58,7 +60,7 @@ h4 {
 
 .button-neutral {
   background-color: var(--white);
-  color: var(--black);s
+  color: var(--black);
   border: none;
   padding: 10px 25px;
   border-radius: 26px;
@@ -197,8 +199,15 @@ h4 {
 }
 
 .footer-links-rss h5 {
-  font-style: italic;
+  margin-top: 50px;
+}
+.footer-links-rss h5,
+.footer-links-information h5 {
   font-size: 18px;
+  margin-bottom: 16px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
 }
 .rss-icon {
   display: flex;
@@ -206,7 +215,7 @@ h4 {
 }
 .rss-icon i {
   margin-right: 10px;
-  font-size: 23px;
+  font-size: 40px;
 }
 
 .fa-facebook {
@@ -221,26 +230,35 @@ h4 {
   margin-top: 25px;
 }
 
-.footer-links-information h5 {
-  font-style: italic;
-  font-size: 18px;
-  margin-bottom: 16px;
-}
-
 .footer-contact p {
   font-size: 12px;
+  color: var(--light-black);
 }
 
 .footer-contact p:first-child {
   margin-top: 33px;
+  text-transform: uppercase;
 }
 
 .footer-contact p:last-child {
   margin-top: -7px;
+  text-transform: uppercase;
 }
 
 .footer-contact h5 {
   padding-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-form .footer-input {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--light-grey);
+  border: none;
+  border-radius: 16px;
+  padding: 16.5px;
+  color: var(--black);
+  margin-bottom: 15px;
 }
 
 /* TABLETS MEDIA QUERY */
