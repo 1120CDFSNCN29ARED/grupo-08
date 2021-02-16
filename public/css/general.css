@@ -1,0 +1,170 @@
+/* MOBILE FIRST STYLESHEET */
+
+:root {
+  --black: #000000;
+  --light-black: #2d3436;
+  --white: #ffffff;
+  --dark-pink: #e84393;
+  --blue: #0522fc;
+  --purple: #d705fc;
+  --light-grey: #c2c2c2;
+  --light-grey-2: #adadad;
+}
+
+/* General settings */
+body {
+  display: unset;
+}
+
+.center {
+  text-align: center;
+}
+
+.highlight {
+  color: var(--dark-pink);
+}
+
+/* Font styles */
+.titleLevelOne {
+  font-style: italic;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -1px;
+  font-size: 40px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.titleLevelTwo {
+  font-style: italic;
+  font-weight: 100;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -2px;
+  font-size: 25px;
+  color: var(--light-black);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.titleLevelThree {
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.5px;
+  font-size: 22px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.label {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 2.5px;
+  font-size: 10px;
+  color: var(--light-grey-2);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.bodyTitle {
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.25px;
+  font-size: 18px;
+  color: var(--light-black);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.bodySubtitle {
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: var(--light-black);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.bodyText {
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: var(--light-black);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.bannerTitle {
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.5px;
+  font-size: 20px;
+  color: var(--light-black);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.bannerSubtitle {
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.25px;
+  font-size: 18px;
+  color: var(--light-black);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.2px;
+  font-size: 16px;
+  color: var(--light-black);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Components */
+
+.button-inverse {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 26px;
+}
+
+.button-neutral {
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 26px;
+}
+
+/* Main */
+
+/* TABLETS MEDIA QUERY */
+
+@media (min-width: 768px) {
+}
+
+/* DESKTOP MEDIA QUERY */
+
+@media (min-width: 992px) {
+  /* components */
+
+  .button-inverse {
+    font-size: 20px;
+  }
+}

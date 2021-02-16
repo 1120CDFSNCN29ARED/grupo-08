@@ -1,0 +1,27 @@
+.fonts-container {
+  padding: 10px 20px;
+}
+
+.fonts-container .titleLevelOne,
+.fonts-container .titleLevelTwo,
+.fonts-container .titleLevelThree,
+.fonts-container .bodyTitle,
+.fonts-container .bodySubtitle,
+.fonts-container .bannerTitle,
+.fonts-container .bannerSubtitle,
+.fonts-container .bodyText,
+.fonts-container .label {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .fonts-container {
+    padding: 10px 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .fonts-container {
+    padding: 10px 200px;
+  }
+}
