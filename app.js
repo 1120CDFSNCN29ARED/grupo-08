@@ -18,3 +18,15 @@ app.get("/", (req, res) => {
 
   res.sendFile(htmlPath);
 });
+
+app.get("/product", (req, res) => {
+  let htmlPath = path.join(__dirname, "/views/product.html");
+
+  res.sendFile(htmlPath);
+});
+
+app.get("/fonts", (req, res) => {
+  let htmlPath = path.join(__dirname, "/views/fonts.html");
+
+  res.sendFile(htmlPath);
+});

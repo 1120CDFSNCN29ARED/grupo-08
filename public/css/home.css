@@ -1,0 +1,89 @@
+/* MOBILE FIRST STYLESHEET */
+
+/* Main */
+
+/* Trending */
+
+.trending-section {
+  background-color: var(--black);
+}
+
+.trending-title {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending-title h2 {
+  text-align: center;
+  color: var(--white);
+  margin: 0;
+}
+
+.trending {
+  height: 272px;
+  background-size: cover !important;
+}
+
+.call-to-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+/* featured */
+
+.feature-banner {
+  background-size: cover !important;
+  height: 440px;
+}
+
+.feature-banner-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 165px;
+}
+
+.feature-banner-text h3 {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.feature-banner-text h2 {
+  margin: 5px 0 20px 0;
+  color: var(--dark-pink);
+}
+
+/* TABLETS MEDIA QUERY */
+
+@media (min-width: 768px) {
+  /* main */
+  .trending {
+    height: 493px;
+  }
+
+  .feature-banner-text {
+    height: 440px;
+  }
+}
+
+/* DESKTOP MEDIA QUERY */
+
+@media (min-width: 992px) {
+  /* main */
+  .trending {
+    height: 493px;
+  }
+
+  .feature-banner {
+    height: 738px;
+  }
+
+  .feature-banner-text {
+    height: 738px;
+  }
+}
