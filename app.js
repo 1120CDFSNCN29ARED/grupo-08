@@ -36,3 +36,9 @@ app.get("/register", (req, res) => {
 
   res.sendFile(htmlPath);
 });
+
+app.get("/login", (req, res) => {
+  let htmlPath = path.join(__dirname, "/views/login.html");
+
+  res.sendFile(htmlPath);
+});
