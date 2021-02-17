@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/css/general.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/forms.css" />
     <link
       href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
       rel="stylesheet"
@@ -87,60 +87,36 @@
     </header>
 
     <main>
-      <div class="trending-section">
-        <div class="trending-title">
-          <h2 class="titleLevelTwo">
-            Descubri las <span class="highlight">tendencias</span>
-          </h2>
-        </div>
-
-        <div class="row">
-          <div
-            class="col-6 col-md-5 trending"
-            style="background: url(/images/foto1.png) center center"
-          ></div>
-          <div
-            class="col-6 col-md-7 trending"
-            style="background: url(/images/foto2.png) center center"
-          ></div>
-        </div>
-        <div class="row">
-          <div
-            class="col-6 col-md-6 trending"
-            style="background: url(/images/foto4.png) center center"
-          ></div>
-          <div
-            class="col-6 col-md-6 trending"
-            style="background: url(/images/foto5.png) center center"
-          ></div>
-        </div>
-
-        <div class="row">
-          <div
-            class="col-md-12 trending"
-            style="background: url(/images/foto3.png) center center"
-          ></div>
-        </div>
-
-        <div class="call-to-action">
-          <button class="button-neutral">Ver mas</button>
-        </div>
-      </div>
-
-      <div class="row feature">
-        <div
-          class="col-md-6 feature-banner"
-          style="background: url(/images/finalsale.png) no-repeat center center"
-        ></div>
-        <div class="col-md-6 feature-banner-text">
-          <h6 class="bodySubtitle">Final</h6>
-
-          <h2 class="titleLevelTwo">
-            <span class="highlight">
-              <em>SALE</em>
-            </span>
-          </h2>
-          <button class="button-inverse">Ver mas</button>
+      <div class="form-container">
+        <div class="form-auth">
+          <div class="form-title">
+            <h2 class="titleLevelTwo">Registrate</h2>
+          </div>
+          <div class="form-input">
+            <label class="label" for="name-lastname">Nombre y Apellido</label>
+            <input type="text" id="name-lastname" class="form-auth-input" />
+          </div>
+          <div class="form-input">
+            <label class="label" for="email">Email</label>
+            <input type="email" id="email" class="form-auth-input" />
+          </div>
+          <div class="form-input">
+            <label class="label" for="password">Contraseña</label>
+            <input type="password" id="password" class="form-auth-input" />
+          </div>
+          <div class="form-input">
+            <label class="label" for="confirm-password">
+              Confirmar contraseña
+            </label>
+            <input
+              type="password"
+              id="confirm-password"
+              class="form-auth-input"
+            />
+          </div>
+          <div class="form-input">
+            <input type="submit" class="button-inverse" value="Enviar" />
+          </div>
         </div>
       </div>
     </main>
