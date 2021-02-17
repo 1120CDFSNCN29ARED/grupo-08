@@ -30,3 +30,9 @@ app.get("/fonts", (req, res) => {
 
   res.sendFile(htmlPath);
 });
+
+app.get("/register", (req, res) => {
+  let htmlPath = path.join(__dirname, "/views/register.html");
+
+  res.sendFile(htmlPath);
+});
