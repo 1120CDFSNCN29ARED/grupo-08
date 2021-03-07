@@ -42,3 +42,9 @@ app.get("/login", (req, res) => {
 
   res.sendFile(htmlPath);
 });
+
+app.get("/cart", (req, res) => {
+  let htmlPath = path.join(__dirname, "/views/cart.html");
+
+  res.sendFile(htmlPath);
+});
