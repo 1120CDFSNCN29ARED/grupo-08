@@ -27,66 +27,7 @@
     />
   </head>
   <body>
-    <header>
-      <div class="col-md-12 header-title">
-        <div>
-          <h1 class="titleLevelOne">After Dark</h1>
-          <h2 class="titleLevelTwo">Sunglasses</h2>
-        </div>
-      </div>
-
-      <nav>
-        <div class="drawer" id="drawer">
-          <div class="options-menu">
-            <p>Lentes de sol</p>
-          </div>
-          <div class="options-menu">
-            <p>Lentes de ver</p>
-          </div>
-          <div class="options-menu">
-            <p>Accesorios</p>
-          </div>
-          <div class="options-menu">
-            <p>Envios</p>
-          </div>
-          <div class="options-menu">
-            <p>Contact us</p>
-          </div>
-          <div class="options-menu">
-            <button class="button-inverse">Sing In</button>
-          </div>
-        </div>
-
-        <div class="header-menu">
-          <div class="header-menu-mobile">
-            <div id="toggle-menu"><i class="fas fa-bars"></i></div>
-            <div><img src="/images/logo.png" alt="logo" /></div>
-            <div><i class="fas fa-shopping-cart"></i></div>
-          </div>
-
-          <div class="header-menu-desktop">
-            <div class="options-menu">
-              <p>Lentes de sol</p>
-            </div>
-            <div class="options-menu">
-              <p>Lentes de ver</p>
-            </div>
-            <div class="options-menu">
-              <p>Accesorios</p>
-            </div>
-            <div class="options-menu">
-              <p>Envios</p>
-            </div>
-            <div class="options-menu">
-              <p>Contact us</p>
-            </div>
-            <div class="options-menu">
-              <button class="button-inverse">Sing In</button>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <%- include('partials/header'); %>
 
     <main class="main">
       <div class="checkout-title">
@@ -132,32 +73,7 @@
       </div>
     </main>
 
-    <footer>
-      <div class="row footer">
-        <div class="col-md-6 footer-links">
-          <div class="footer-links-rss">
-            <h5>FOLLOW US</h5>
-            <div class="rss-icon">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-instagram"></i>
-            </div>
-          </div>
-          <div class="footer-links-information">
-            <h5>INFORMACION</h5>
-            <p>Términos y condiciones</p>
-            <p>Nosotros</p>
-            <p>Jobs</p>
-          </div>
-        </div>
-        <div class="col-md-6 footer-contact">
-          <div>
-            <p>ESCRIBÍNOS</p>
-            <h5>after-dark@hotmail.com</h5>
-            <p>Keep in touch</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <%- include('partials/footer'); %>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
