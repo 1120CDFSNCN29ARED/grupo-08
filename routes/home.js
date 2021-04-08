@@ -1,12 +1,13 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+const homeController = require("../controllers/homeController");
 
 router.get("/", function (req, res) {
-  res.render("home");
+  homeController.showHomeView(req, res);
 });
 
 router.get("/fonts", function (req, res) {
-  res.render("fonts");
+  homeController.showFontsView(req, res);
 });
 
 module.exports = router;

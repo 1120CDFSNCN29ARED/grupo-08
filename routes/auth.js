@@ -1,12 +1,13 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+const authController = require("../controllers/authController");
 
-router.get("/register", function (req, res) {
-  res.render("register");
+router.get("/register", (req, res) => {
+  authController.showRegisterView(req, res);
 });
 
 router.get("/login", function (req, res) {
-  res.render("login");
+  authController.showLoginView(req, res);
 });
 
 module.exports = router;

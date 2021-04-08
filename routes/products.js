@@ -1,10 +1,9 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+const productsController = require("../controllers/productsController");
 
 router.get("/:productId", function (req, res) {
-  const productId = req.params.productId;
-
-  res.render("product", { productId: productId });
+  productsController.showproductsView(req, res);
 });
 
 module.exports = router;
