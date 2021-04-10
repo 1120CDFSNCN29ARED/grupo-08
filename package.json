@@ -1,25 +1,19 @@
 {
   "name": "after-dark",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "private": true,
   "description": "Somos una empresa creada en 2010, dedicada a los lentes tanto de sol como de ver; los mismos tienen un diseño basado fundamentalmente en la estetica y comodidad de nuestros clientes.",
-  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/1120CDFSNCN29ARED/grupo-08.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/1120CDFSNCN29ARED/grupo-08/issues"
-  },
-  "homepage": "https://github.com/1120CDFSNCN29ARED/grupo-08#readme",
   "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
     "nodemon": "^2.0.7"
   }
 }
