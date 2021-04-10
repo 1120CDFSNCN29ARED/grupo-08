@@ -28,13 +28,17 @@
     />
   </head>
   <body>
-    <%- include('partials/header'); %>
+    <%- include('../partials/header'); %>
 
     <main>
       <div class="form-container">
         <div class="form-auth">
           <div class="form-title">
-            <h2 class="titleLevelTwo">Sing In</h2>
+            <h2 class="titleLevelTwo">Registrate</h2>
+          </div>
+          <div class="form-input">
+            <label class="label" for="name-lastname">Nombre y Apellido</label>
+            <input type="text" id="name-lastname" class="form-auth-input" />
           </div>
           <div class="form-input">
             <label class="label" for="email">Email</label>
@@ -45,13 +49,23 @@
             <input type="password" id="password" class="form-auth-input" />
           </div>
           <div class="form-input">
+            <label class="label" for="confirm-password">
+              Confirmar contraseña
+            </label>
+            <input
+              type="password"
+              id="confirm-password"
+              class="form-auth-input"
+            />
+          </div>
+          <div class="form-input">
             <input type="submit" class="button-inverse" value="Enviar" />
           </div>
         </div>
       </div>
     </main>
 
-    <%- include('partials/footer'); %>
+    <%- include('../partials/footer'); %>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"

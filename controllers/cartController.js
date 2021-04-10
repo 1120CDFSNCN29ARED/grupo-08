@@ -1,6 +1,6 @@
 const cartController = {
   showCartView: (req, res) => {
-    res.render("cart");
+    res.render("products/cart");
   },
 };
 

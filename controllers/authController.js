@@ -1,9 +1,9 @@
 const authController = {
   showRegisterView: (req, res) => {
-    res.render("register");
+    res.render("users/register");
   },
   showLoginView: (req, res) => {
-    res.render("login");
+    res.render("users/login");
   },
 };
 
