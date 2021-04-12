@@ -8,6 +8,10 @@
   justify-content: center;
 }
 
+.header-title a {
+  text-decoration: none;
+}
+
 .header-title .titleLevelOne,
 .header-title .titleLevelTwo {
   color: var(--white);

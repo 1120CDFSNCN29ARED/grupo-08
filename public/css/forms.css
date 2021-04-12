@@ -23,6 +23,10 @@
   color: var(--black);
 }
 
+.form-error {
+  color: red;
+}
+
 /* TABLETS MEDIA QUERY */
 
 @media (min-width: 768px) {

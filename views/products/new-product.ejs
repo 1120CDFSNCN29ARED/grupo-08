@@ -31,64 +31,112 @@
 
     <main>
       <div class="form-container">
-        <div class="form-auth">
+        <form
+          class="form-auth"
+          method="POST"
+          action="/products"
+          enctype="multipart/form-data"
+        >
           <div class="form-title">
             <h2 class="titleLevelTwo">Crear producto</h2>
           </div>
           <div class="form-input">
             <label class="label" for="name">Nombre</label>
-            <input type="text" id="name" class="form-auth-input" />
+            <input
+              name="name"
+              type="text"
+              id="name"
+              class="form-auth-input"
+              value="<%= locals.old && old.name %>"
+            />
+            <%if (locals.errors && errors.name) { %>
+            <p class="form-error"><%= errors.name.msg %></p>
+            <% } %>
           </div>
 
           <div class="form-input">
             <label class="label" for="description">Descripción</label>
-            <textarea
+            <input
+              name="description"
               type="text"
               id="description"
               class="form-auth-input"
-            ></textarea>
+              value="<%= locals.old && old.description %>"
+            />
+
+            <%if (locals.errors && errors.description) { %>
+            <p class="form-error"><%= errors.description.msg %></p>
+            <% } %>
           </div>
 
           <div class="form-input">
-            <label class="label" for="image">Descripción</label>
+            <label class="label" for="image">Imagen</label>
             <input
               type="file"
               name="image"
               id="image"
               class="form-auth-input"
+              value="<%= locals.old && old.image %>"
+              required
             />
+            <%if (locals.errors && errors.image) { %>
+            <p class="form-error"><%= errors.image.msg %></p>
+            <% } %>
           </div>
 
           <div class="form-input">
-            <label class="label" for="price">Categoría</label>
-            <select name="category" id="category" class="form-auth-input">
+            <label class="label" for="category">Categoría</label>
+            <select
+              name="category"
+              id="category"
+              class="form-auth-input"
+            >
               <option default selected disabled>Seleccione una opción</option>
-              <option value="VIEWING_GLASSES">Lentes de sol</option>
-              <option value="SUNGLASSES">Lentes de ver</option>
-              <option value="ACCESORIES">Accesorios</option>
+              <option value="VIEWING_GLASSES" <%= locals.old && old.category === "VIEWING_GLASSES" ? "selected" : "" %>>Lentes de sol</option>
+              <option value="SUNGLASSES" <%= locals.old && old.category === "SUNGLASSES" ? "selected" : "" %>>Lentes de ver</option>
+              <option value="ACCESORIES" <%= locals.old && old.category === "ACCESORIES" ? "selected" : "" %>>Accesorios</option>
             </select>
+            <%if (locals.errors && errors.category) { %>
+            <p class="form-error"><%= errors.category.msg %></p>
+            <% } %>
           </div>
 
           <div class="form-input">
-            <label class="label" for="price">Colores</label>
-            <select name="colors" id="colors" class="form-auth-input">
+            <label class="label" for="colors">Colores</label>
+            <select
+              name="colors"
+              id="colors"
+              class="form-auth-input"
+            >
               <option default selected disabled>Seleccione una opción</option>
-              <option value="BLACK">Negro</option>
-              <option value="BROWN">Marrón</option>
-              <option value="SHIMMERING">Tornasolado</option>
-              <option value="OTHER">Otro</option>
+              <option value="BLACK" <%= locals.old && old.colors === "BLACK" ? "selected" : "" %>>Negro</option>
+              <option value="BROWN" <%= locals.old && old.colors === "BROWN" ? "selected" : "" %>>Marrón</option>
+              <option value="SHIMMERING" <%= locals.old && old.colors === "SHIMMERING" ? "selected" : "" %>>Tornasolado</option>
+              <option value="OTHER" <%= locals.old && old.colors === "OTHER" ? "selected" : "" %>>Otro</option>
             </select>
+            <%if (locals.errors && errors.colors) { %>
+            <p class="form-error"><%= errors.colors.msg %></p>
+            <% } %>
           </div>
 
           <div class="form-input">
             <label class="label" for="price">Precio</label>
-            <input type="number" id="price" class="form-auth-input" />
+            <input
+              type="number"
+              id="price"
+              class="form-auth-input"
+              name="price"
+              value="<%= locals.old && old.price %>"
+            />
+            <%if (locals.errors && errors.price) { %>
+            <p class="form-error"><%= errors.price.msg %></p>
+            <% } %>
           </div>
 
           <div class="form-input">
             <input type="submit" class="button-inverse" value="Aceptar" />
           </div>
-        </div>
+        </form>
       </div>
     </main>
 
