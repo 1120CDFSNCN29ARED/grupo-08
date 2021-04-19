@@ -22,7 +22,7 @@ const multerDiskStorage = multer.diskStorage({
 const fileUpload = multer({ storage: multerDiskStorage });
 
 // Express validator
-const validateCreateProduct = [
+const validateProduct = [
   check("name")
     .notEmpty()
     .withMessage(strings.VALIDATE_CREATE_PRODUCT_NAME_EMPTY)
@@ -64,7 +64,7 @@ router.get("/:productId", function (req, res) {
 
 router.post(
   "/",
-  [fileUpload.single("image"), validateCreateProduct],
+  [fileUpload.single("image"), validateProduct],
   function (req, res) {
     productsController.createNewProduct(req, res);
   }
@@ -81,5 +81,17 @@ router.get("/categories/:category", function (req, res) {
 router.delete("/:productId", function (req, res) {
   productsController.deleteProduct(req, res);
 });
+
+router.get("/:productId/edit", function (req, res) {
+  productsController.showEditForm(req, res);
+});
+
+router.put(
+  "/:productId",
+  [fileUpload.single("image"), validateProduct],
+  function (req, res) {
+    productsController.editProduct(req, res);
+  }
+);
 
 module.exports = router;

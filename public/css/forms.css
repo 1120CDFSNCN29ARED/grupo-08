@@ -27,6 +27,12 @@
   color: red;
 }
 
+.productPreview {
+  width: 200px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
 /* TABLETS MEDIA QUERY */
 
 @media (min-width: 768px) {

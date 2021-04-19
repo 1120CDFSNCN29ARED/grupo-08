@@ -126,6 +126,73 @@ const productsController = {
     // Use redirect instead of render to mantain the original url
     res.redirect("back");
   },
+  showEditForm: (req, res) => {
+    // Leer y traducir la base de datos
+    const productsListFile = fs.readFileSync(
+      path.join(__dirname, "../data/products.json"),
+      { encoding: "utf8" }
+    );
+    const products = JSON.parse(productsListFile);
+
+    // Buscar nuestro objeto por su id
+    const product = products.find(
+      (product) => product.id === req.params.productId
+    );
+
+    // Compartirlo a la vista;
+    res.render("products/edit-product", { product: product });
+  },
+  editProduct: (req, res) => {
+    const errors = validationResult(req);
+
+    // Find the product to edit
+    const productsListFile = fs.readFileSync(
+      path.join(__dirname, "../data/products.json"),
+      { encoding: "utf8" }
+    );
+    const products = JSON.parse(productsListFile);
+
+    const product = products.find(
+      (product) => product.id === req.params.productId
+    );
+
+    if (errors.isEmpty()) {
+      product.name = req.body.name;
+      product.description = req.body.description;
+      product.category = req.body.category;
+      product.colors = req.body.colors;
+      product.price = req.body.price;
+
+      if (req.file && req.file.file) {
+        product.image = req.file.filename;
+      }
+
+      for (let i = 0; i < products.length; i++) {
+        if (products[i].id === product.id) {
+          products.splice(i, 1, product);
+
+          break;
+        }
+      }
+
+      // Convert object into string
+      const productsJSON = JSON.stringify(products);
+
+      // Write json file
+      fs.writeFileSync(
+        path.join(__dirname, "../data/products.json"),
+        productsJSON
+      );
+
+      res.redirect("back");
+    } else {
+      res.render("products/edit-product", {
+        errors: errors.mapped(),
+        old: req.body,
+        product: product,
+      });
+    }
+  },
 };
 
 module.exports = productsController;
