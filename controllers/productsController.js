@@ -97,6 +97,32 @@ const productsController = {
 
     res.render("products/products", { products: filtedProduct });
   },
+  deleteProduct: (req, res) => {
+    const productId = req.params.productId;
+
+    const productsListFile = fs.readFileSync(
+      path.join(__dirname, "../data/products.json"),
+      { encoding: "utf8" }
+    );
+    const products = JSON.parse(productsListFile);
+
+    for (let i = 0; i < products.length; i++) {
+      if (products[i].id === productId) {
+        products.splice(i, 1);
+
+        break;
+      }
+    }
+
+    // Convert object into string
+    const productsJSON = JSON.stringify(products);
+
+    // Write json file
+    fs.writeFileSync(
+      path.join(__dirname, "../data/products.json"),
+      productsJSON
+    );
+  },
 };
 
 module.exports = productsController;

@@ -78,4 +78,8 @@ router.get("/categories/:category", function (req, res) {
   productsController.showProductListByCategory(req, res);
 });
 
+router.delete("/:productId", function (req, res) {
+  productsController.deleteProduct(req, res);
+});
+
 module.exports = router;
