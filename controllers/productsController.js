@@ -122,6 +122,9 @@ const productsController = {
       path.join(__dirname, "../data/products.json"),
       productsJSON
     );
+
+    // Use redirect instead of render to mantain the original url
+    res.redirect("back");
   },
 };
 
