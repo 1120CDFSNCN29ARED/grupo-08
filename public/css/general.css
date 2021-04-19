@@ -134,6 +134,14 @@ body {
   padding: 0;
 }
 
+.menuItem a {
+  text-decoration: none;
+}
+
+.options-menu a {
+  text-decoration: none;
+}
+
 /* Components */
 
 .button-inverse {

@@ -27,11 +27,11 @@
 }
 
 .product-details .bodyTitle {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .product-details .bodyText {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   font-style: italic;
 }
 
@@ -46,6 +46,7 @@
 .related-products .titleLevelTwo {
   margin-bottom: 20px;
 }
+
 .related-photo {
   height: 200px;
   background-size: cover !important;

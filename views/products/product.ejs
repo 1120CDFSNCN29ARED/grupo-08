@@ -35,7 +35,10 @@
         <div class="col-md-2 product-thumbnails">
           <div
             class="product-thumbnail"
-            style="background: url(/images/product/product1.jpg) center center"
+            style="
+              background: url(/images/products/<%= product.image %>) center
+                center;
+            "
           ></div>
           <div
             class="product-thumbnail"
@@ -57,21 +60,28 @@
         <div class="col-md-6 product-main">
           <div
             class="product-main-photo"
-            style="background: url(/images/product/product1.jpg) center center"
+            style="
+              background: url(/images/products/<%= product.image %>) center
+                center;
+            "
           ></div>
         </div>
         <div class="col-md-4 product-details">
-          <h2 class="titleLevelTwo">
-            (ID: <%= productId %>) Lentes de sol cat-eyes con estuche
-          </h2>
-          <h5 class="bodyTitle">Tallas y medidas</h5>
+          <h2 class="titleLevelTwo"><%= product.name %></h2>
+          <h5 class="bodyTitle">$<%= product.price %></h5>
+          <h5 class="bodyTitle">ID</h5>
+          <p class="bodyText"><%= product.id %></p>
+          <h5 class="bodyTitle">Colores</h5>
+          <p class="bodyText"><%= product.colors %></p>
+          <h5 class="bodyTitle">Categoría</h5>
+          <p class="bodyText"><%= product.category %></p>
           <h5 class="bodyTitle">Descripción</h5>
+          <p class="bodyText"><%= product.description %></p>
           <p class="bodyText">
             <span class="highlight">
               Envio gratuito en ordenes mayores a $10.000
             </span>
           </p>
-          <p class="bodyText">Politica de devolución</p>
           <button class="button-inverse">Añadir al carrito</button>
         </div>
       </div>
