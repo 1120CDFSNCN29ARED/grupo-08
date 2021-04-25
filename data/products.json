@@ -1,11 +1,1 @@
-[
-  {
-    "id": "150e4546-8146-4864-9b23-66c5effd2fa7",
-    "name": "Lentes de Sol para ver",
-    "description": "lorem ipsum kckkkckd",
-    "category": "ACCESORIES",
-    "colors": "OTHER",
-    "price": "94304930294032",
-    "image": "e68a2c67-a7b5-444c-83ed-746588bb8b07.png"
-  }
-]
+[{"id":"f8d06d88-6c0d-4d4b-a845-1711ea519e85","name":"Lentes de sol oscuros ","description":"El método find ejecuta la función callback una vez por cada índice del array hasta que encuentre uno en el que el callback devuelva un valor verdadero. Si es así, find devuelve inmediatamente el valor del elemento. En caso contrario, find devuelve undefined.","category":"VIEWING_GLASSES","colors":"BLACK","price":"958884","image":"b6d2a3d6-daac-4527-a7d8-05449fb4747f.png"}]

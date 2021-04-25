@@ -21,7 +21,7 @@ const multerDiskStorage = multer.diskStorage({
 
 const fileUpload = multer({ storage: multerDiskStorage });
 
-// Express validator
+// Express validator - validacion
 const validateProduct = [
   check("name")
     .notEmpty()
