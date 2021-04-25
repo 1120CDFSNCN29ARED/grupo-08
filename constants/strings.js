@@ -11,4 +11,5 @@ const strings = {
   VALIDATE_CREATE_PRODUCT_IMAGE_EMPTY: "La imagen es requerida",
 };
 
+// Frizzar las varibles para que no puedan modificarse
 module.exports = Object.freeze(strings);
