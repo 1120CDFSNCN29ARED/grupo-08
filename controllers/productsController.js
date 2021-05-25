@@ -1,26 +1,15 @@
 const { validationResult } = require("express-validator");
-const { v4: uuidv4 } = require("uuid");
-const fs = require("fs");
-const path = require("path");
+const db = require("../database/models");
 
 const productsController = {
-  showproductsView: (req, res) => {
-    // Leer y traducir la base de datos
-    const productsListFile = fs.readFileSync(
-      path.join(__dirname, "../data/products.json"),
-      { encoding: "utf8" }
-    );
-    const products = JSON.parse(productsListFile);
-
-    // Buscar nuestro objeto por su id
-    const product = products.find(function (product) {
-      return product.id === req.params.productId;
-    });
+  showproductsView: async (req, res) => {
+    // Buscar uno solo en vez de buscar muchos
+    const product = await db.Products.findByPk(req.params.productId);
 
     // Compartirlo a la vista
     res.render("products/product", { product: product });
   },
-  showNewProductView: (req, res) => {
+  showNewProductView: async (req, res) => {
     res.render("products/new-product");
   },
   showEditProductView: (req, res) => {
@@ -30,43 +19,18 @@ const productsController = {
     const errors = validationResult(req); // resultado de la validacion
 
     if (errors.isEmpty()) {
-      // Crear un nuevo objeto
-      const newProduct = {
-        id: uuidv4(),
-        name: req.body.name,
+      // Crear un objecto de sequelize con los datos
+      const newProduct = db.Products.build({
+        title: req.body.name,
         description: req.body.description,
         category: req.body.category,
-        colors: req.body.colors,
+        color: req.body.colors,
         price: req.body.price,
         image: req.file.filename,
-      };
+      });
 
-      // Read products from JSON
-      const productsListFile = fs.readFileSync(
-        path.join(__dirname, "../data/products.json"),
-        { encoding: "utf8" }
-      );
-
-      let products;
-
-      // Check if file is empty
-      if (productsListFile === "") {
-        products = [];
-      } else {
-        products = JSON.parse(productsListFile);
-      }
-
-      // Add new product to array
-      products.push(newProduct);
-
-      // Convert object into string
-      const productsJSON = JSON.stringify(products);
-
-      // Write json file
-      fs.writeFileSync(
-        path.join(__dirname, "../data/products.json"),
-        productsJSON
-      );
+      // Guardamos el objecto en la base de datos
+      newProduct.save();
 
       res.render("sucess-product", { productTitle: req.body.name });
     } else {
@@ -76,85 +40,45 @@ const productsController = {
       });
     }
   },
-  showProductList: (req, res) => {
-    const productsListFile = fs.readFileSync(
-      path.join(__dirname, "../data/products.json"),
-      { encoding: "utf8" }
-    );
-    const products = JSON.parse(productsListFile);
+  showProductList: async (req, res) => {
+    const products = await db.Products.findAll();
 
     res.render("products/products", { products: products });
   },
-  showProductListByCategory: (req, res) => {
-    const productsListFile = fs.readFileSync(
-      path.join(__dirname, "../data/products.json"),
-      { encoding: "utf8" }
-    );
-    const products = JSON.parse(productsListFile);
-    const filtedProduct = products.filter(
-      (product) => product.category === req.params.category
-    );
+  showProductListByCategory: async (req, res) => {
+    const products = await db.Products.findAll({
+      where: {
+        category: req.params.category,
+      },
+    });
 
-    res.render("products/products", { products: filtedProduct });
+    res.render("products/products", { products: products });
   },
-  deleteProduct: (req, res) => {
+  deleteProduct: async (req, res) => {
     const productId = req.params.productId;
 
-    const productsListFile = fs.readFileSync(
-      path.join(__dirname, "../data/products.json"),
-      { encoding: "utf8" }
-    );
-    const products = JSON.parse(productsListFile);
+    // Buscar uno solo en vez de buscar muchos
+    await db.Products.destroy({
+      where: {
+        id: productId,
+      },
+    });
 
-    for (let i = 0; i < products.length; i++) {
-      if (products[i].id === productId) {
-        products.splice(i, 1);
-
-        break;
-      }
-    }
-
-    // Convert object into string
-    const productsJSON = JSON.stringify(products);
-
-    // Write json file
-    fs.writeFileSync(
-      path.join(__dirname, "../data/products.json"),
-      productsJSON
-    );
-
-    // Use redirect instead of render to mantain the original url
+    // Usar redirect en vez de render para mantener la url orginal
     res.redirect("back");
   },
-  showEditForm: (req, res) => {
-    // Leer y traducir la base de datos
-    const productsListFile = fs.readFileSync(
-      path.join(__dirname, "../data/products.json"),
-      { encoding: "utf8" }
-    );
-    const products = JSON.parse(productsListFile);
-
-    // Buscar nuestro objeto por su id
-    const product = products.find(
-      (product) => product.id === req.params.productId
-    );
+  showEditForm: async (req, res) => {
+    // Buscar uno solo en vez de buscar muchos
+    const product = await db.Products.findByPk(req.params.productId);
 
     // Compartirlo a la vista;
     res.render("products/edit-product", { product: product });
   },
-  editProduct: (req, res) => {
+  editProduct: async (req, res) => {
     const errors = validationResult(req);
 
-    // Encontrar el producto para validar
-    const productsListFile = fs.readFileSync(
-      path.join(__dirname, "../data/products.json"),
-      { encoding: "utf8" }
-    );
-    const products = JSON.parse(productsListFile);
-
-    const product = products.find(
-      (product) => product.id === req.params.productId
-    );
+    // Buscar uno solo en vez de buscar muchos
+    const product = await db.Products.findByPk(req.params.productId);
 
     if (errors.isEmpty()) {
       // Modificamos el objeto de product
@@ -168,14 +92,7 @@ const productsController = {
         product.image = req.file.filename;
       }
 
-      // Convert object into string
-      const productsJSON = JSON.stringify(products);
-
-      // Write json file
-      fs.writeFileSync(
-        path.join(__dirname, "../data/products.json"),
-        productsJSON
-      );
+      product.save();
 
       res.redirect("back");
     } else {

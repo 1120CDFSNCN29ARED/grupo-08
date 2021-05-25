@@ -41,16 +41,16 @@
             <h2 class="titleLevelTwo">Editar producto <%= product.name %></h2>
           </div>
           <div class="form-input">
-            <label class="label" for="name">Nombre</label>
+            <label class="label" for="title">Nombre</label>
             <input
-              name="name"
+              name="title"
               type="text"
-              id="name"
+              id="title"
               class="form-auth-input"
-              value="<%= product.name || locals.old && old.name %>"
+              value="<%= product.title || locals.old && old.title %>"
             />
-            <%if (locals.errors && errors.name) { %>
-            <p class="form-error"><%= errors.name.msg %></p>
+            <%if (locals.errors && errors.title) { %>
+            <p class="form-error"><%= errors.title.msg %></p>
             <% } %>
           </div>
 

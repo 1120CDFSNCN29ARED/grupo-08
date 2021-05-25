@@ -23,7 +23,7 @@ const fileUpload = multer({ storage: multerDiskStorage });
 
 // Express validator - validacion
 const validateProduct = [
-  check("name")
+  check("title")
     .notEmpty()
     .withMessage(strings.VALIDATE_CREATE_PRODUCT_NAME_EMPTY)
     .isLength({

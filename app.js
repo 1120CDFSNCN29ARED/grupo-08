@@ -8,7 +8,7 @@ const homeRouter = require("./routes/home");
 const productsRouter = require("./routes/products");
 const authRouter = require("./routes/auth");
 const cartRouter = require("./routes/cart");
-const methodOverride = require("method-override")
+const methodOverride = require("method-override");
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-app.use(methodOverride("_method"))
+app.use(methodOverride("_method"));
 
 app.use("/", homeRouter);
 app.use("/products", productsRouter);
